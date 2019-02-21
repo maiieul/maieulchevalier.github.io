@@ -1,10 +1,18 @@
 html, body {
     margin: 0px;
-    background-image: url("data:image/jpeg;base64,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");
+    background-image: url("https://chupacdn.s3.amazonaws.com/catalog/product/cache/5/thumbnail/1280x/17f82f742ffe127f42dca9de82fb58b1/6/-/6-vector-game-backgrounds-8003_imgs_8003_3.png");
 }
 
 h1 {
-    margin: 0.5rem 3rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+ul {
+    margin-right: 2rem;
+}
+
+li {
+    list-style-type: none;
     text-align: center;
 }
 
@@ -20,7 +28,6 @@ button {
 }
 
 #infoBar {
-    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -35,23 +42,23 @@ button {
     display: inline-block;
 }
 
-.top {
+.top-font-size {
     font-size: 1.3rem;
 }
 
 #container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*1fr makes that images fill the entire page when its super small*/ 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 0px;
-    grid-template-rows: 1fr;
     margin: 1rem;
+    padding: 1em;
 }
 
 .zone {
-/*    display:block;*/
     border-radius:4px;
     border:1px solid #BBB;
     transition: all 0.3s linear;
+    opacity: 0.95;
 }
 
 .zone:hover {
@@ -63,14 +70,19 @@ button {
 
 .card {
     cursor:pointer;
-    font-size: 4rem;
     text-align: center;
-    margin: 1rem;
+    margin: 0.3rem;
     transition: all 0.5s linear;
+    font-size: 3rem;
     border-radius:4px;
     border:1px solid rgb(48, 48, 39);
-    transition: all 0.3s linear;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    #container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .cardOnClick {
@@ -81,90 +93,8 @@ button {
     visibility: hidden;
 }
 
-/*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
-/***********************************************************************
- *  Green Background
- **********************************************************************/
-.green{
-    background: #56B870; /* Old browsers */
-    background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#56B870), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #56B870 0%,#a5c956 100%); /* IE10+ */
-    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
-}
-
-/***********************************************************************
- *  Red Background
- **********************************************************************/
-.red{
-    background: #C655BE; /* Old browsers */
-    background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C655BE), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
-    background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
-}
-
-/***********************************************************************
- *  Yellow Background
- **********************************************************************/
-.yellow{
-    background: #F3AAAA; /* Old browsers */
-    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F3AAAA), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* IE10+ */
-    background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
-}
-
-/***********************************************************************
- *  Blue Background
- **********************************************************************/
 .blue {
     background: linear-gradient(#72afec 0%,#4e8cca 44%,#4195e9 100%); /* W3C */
-}
-
-.blueReverse {
-    background: linear-gradient(to bottom right, #7abcff 0%,#60abf8 44%,#4096ee 98%, rgb(165, 226, 255) 100%);
-}
-
-/***********************************************************************
- *  Purple Background
- **********************************************************************/
-.purple {
-    background: #A88BEB; /* Old browsers */
-    background: -moz-linear-gradient(top, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A88BEB), color-stop(44%,#F1A7F1), color-stop(100%,#F8CEEC)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* IE10+ */
-    background: linear-gradient(top, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* W3C */
-}
-
-/***********************************************************************
- *  Brown Background
- **********************************************************************/
-.brown {
-    background: #f6e6b4; /* Old browsers */
-    background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* IE10+ */
-    background: linear-gradient(top, #f6e6b4 0%,#ed9017 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
-}
-
-.midnight {
-    background: linear-gradient(to right, #232526, #414345);
-}
-
-.multicolor {
-    background: linear-gradient(to bottom right, rgb(45, 179, 189), rgb(100, 164, 175) 70%, rgba(123, 89, 187, 0.623));
 }
 
 #copyright {
