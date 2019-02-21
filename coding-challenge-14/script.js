@@ -1,6 +1,16 @@
+let time = 0;
+let cardCounter = 0;
+let card1, card2, text1, text2;
+let moves = document.getElementById("moves");
+let movesCounter = 0;
+let twoCardsFlipped = false;
+let container = document.getElementById('container');
+let cards = document.getElementsByClassName('card');
+const button = document.querySelector("button");
+
+
 // TIMER 
 const timer = () => {
-    let time = 0;
     var interval = setInterval(function() {
         document.getElementById('timer').innerHTML = ++time;
 
@@ -15,35 +25,26 @@ const timer = () => {
 timer();
 
 // COMPARE TWO CARDS
-let cards = document.getElementsByClassName('card');
 
-
-const shuffleDiv = () => {
-    let container = document.getElementById('container');
+const shuffleDiv = (container) => {
     for (let i = container.children.length; i >= 0; i--) {
-        container.appendChild(container.children[Math.random() * i | 0]);
+        container.appendChild(container.children[Math.random() * i | 0]); // this function sorts my divs randomly (found online)
     }
     return container.children;
+
     }
-shuffleDiv(cards);
+shuffleDiv(container);
 
-
-
-
-const compareTwoCards = () => {
-    let cardCounter = 0;
-    let text1 = "";
-    let text2 = "";
-    let moves = document.getElementById("moves");
-    let movesCounter = 0;
+const compareTwoCards = () => {    
     for (let i = 0, len = cards.length; i < len; i++) {
         const revealCard = () => {
             cards[i].classList.toggle("cardOnClick");
             setTimeout(() => {cards[i].children[0].classList.toggle("invisible");}, 250);
         }
         const comparator = () => {
+            if (twoCardsFlipped) return; // cannot click on another card while two cards are already flipped
             movesCounter += 1;
-            moves.innerHTML = "moves: " + movesCounter;
+            moves.innerHTML = movesCounter;
             if (cardCounter === 0) {
             cardCounter = cardCounter + 1;
             revealCard();
@@ -58,13 +59,20 @@ const compareTwoCards = () => {
                 text2 = cards[i].textContent;
                 card2 = cards[i];                  // gives card2 the value of the second card that is clicked
             } if (cardCounter >= 2 && text1 !== text2) { // since cards are objects, must use text1 and text2 to compare them. two objects that seem identical will return false when compared.
+                twoCardsFlipped = true;
                 setTimeout(() => {
+                    // debugger;
                     card1.classList.toggle("cardOnClick");
-                    setTimeout(() => {card1.children[0].classList.toggle("invisible");}, 250);
+                    setTimeout(() => {
+                        card1.children[0].classList.toggle("invisible")
+                    ;}, 250);
                     card2.classList.toggle("cardOnClick");
-                    setTimeout(() => {card2.children[0].classList.toggle("invisible");}, 250);
+                    setTimeout(() => {
+                        card2.children[0].classList.toggle("invisible");
+                        twoCardsFlipped = false;
+                    }, 250);
+                    cardCounter = 0;
                 }, 500);
-                cardCounter = 0;
             }    else if (cardCounter >=2 && text1 === text2) {
                 cardCounter = 0;
                 setTimeout(() => {
@@ -79,7 +87,7 @@ const compareTwoCards = () => {
 compareTwoCards();
 
 // RESET BUTTON
-const button = document.querySelector("button");
+
 const resetDeck = () => {
     for (let i = 0, len = cards.length; i < len; i++) {
         if (cards[i].className === "zone card blue cardOnClick invisible") {
@@ -88,7 +96,7 @@ const resetDeck = () => {
             cards[i].children[0].classList.toggle("invisible");
         }
     }
-    setTimeout(() => {location.reload();}, 250);
+    setTimeout(() => {location.reload();}, 500);
 }
 
 button.addEventListener("click", resetDeck);
